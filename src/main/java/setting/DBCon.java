@@ -1,4 +1,4 @@
-package erp_project.init;
+package setting;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

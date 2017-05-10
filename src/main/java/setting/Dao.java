@@ -1,4 +1,4 @@
-package erp_project.init;
+package setting;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,7 +15,7 @@ public class Dao {
 	}
 
 	public PreparedStatement getPreStmt(String sql, Object... objects) throws Exception {
-		Connection con = DBCon.getConnection(Config.URL + Config.DB_NAME, Config.USER, Config.PWD);
+		Connection con = DBCon.getConnection(Config.URL, Config.ROOT_USER, "rootroot");
 		PreparedStatement pStmt = con.prepareStatement(sql);
 		for (int i = 0; i < objects.length; i++) {
 			pStmt.setObject(i + 1, objects[i]);
@@ -33,7 +33,7 @@ public class Dao {
 
 	public ResultSet getQueryRes(String sql, Object... objects) throws Exception {
 		PreparedStatement pstmt = getPreStmt(sql, objects);
-		return pstmt.executeQuery(); //execute 실행하다
+		return pstmt.executeQuery();
 	}
 
 	public int getUpdateResult(String sql, Object... objects) throws Exception {

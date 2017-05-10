@@ -24,13 +24,11 @@ dependencies {
 	compile group: 'log4j', name: 'log4j', version: '1.2.17'
 	
 	compile files('src/main/resources/erp_project/libraries/erp_myframework.jar')
-	compile files('src/main/resources/erp_project/lookandfeel/synthetica.jar')
 }
 
 jar{
-	mainClassName='erp_project.MainApp'
-	//mainClassName='kr.or.dgit.sw_project.TestMain'
-	baseName='NCS_ERP'
+	mainClassName='Main.TestMain'
+	baseName='TestMain'
 	appendix='bin'
 	version =1.0
 	manifest{

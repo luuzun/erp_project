@@ -43,3 +43,7 @@ SHOW tables;
 SELECT * FROM department;
 SELECT * FROM employee;
 SELECT * FROM title;
+
+select count(*) as isExists from information_schema.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME='title';
+select count(*) as isExists from information_schema.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME='department';
+select count(*) as isExists from information_schema.TABLES where TABLE_SCHEMA = 'ncs_erp' and TABLE_NAME='employee';
